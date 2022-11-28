@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Media } from "@/types";
-import { PropType, ref } from "vue";
+import { ref } from "vue";
+import type { PropType } from "vue";
 
 const activeIndex = ref(0);
 
