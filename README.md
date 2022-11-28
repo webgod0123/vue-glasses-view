@@ -1,27 +1,30 @@
-# vue-project
+# What I have done
 
-This template should help get you started developing with Vue 3 in Vite.
+## Collections Menu
 
-## Recommended IDE Setup
+![image](https://user-images.githubusercontent.com/91973281/204221572-7c4191ae-a3d1-4179-b324-4fa5603a06e9.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Filter Field
 
-## Type Support for `.vue` Imports in TS
+![image](https://user-images.githubusercontent.com/91973281/204221682-f55d37d0-9834-48fc-9133-98cc215378d0.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Glasses View
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+![image](https://user-images.githubusercontent.com/91973281/204219367-70a12a48-e4d6-4f5d-a6f8-e80be4297c8e.png)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-## Customize configuration
+## Glass Image Slider
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![image](https://user-images.githubusercontent.com/91973281/204219702-f087ce9e-5ba0-4c5b-8df9-b9ca612c389e.png)
 
-## Project Setup
+
+## Responsive UI
+
+![image](https://user-images.githubusercontent.com/91973281/204221777-7a07ea5e-3875-4b3f-a822-d254199e1953.png)
+
+## Infinite Scroll Function
+
+# Project Setup
 
 ```sh
 npm install
