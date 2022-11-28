@@ -2,11 +2,11 @@
 
 ## Collections Menu
 
-![image](https://user-images.githubusercontent.com/91973281/204219132-a83a842c-816c-4d93-bb82-41b385c23a01.png)
+![image](https://user-images.githubusercontent.com/91973281/204221572-7c4191ae-a3d1-4179-b324-4fa5603a06e9.png)
 
 ## Filter Field
 
-![image](https://user-images.githubusercontent.com/91973281/204219253-2bbaf1ec-9e51-4d56-ba49-6853da75e893.png)
+![image](https://user-images.githubusercontent.com/91973281/204221682-f55d37d0-9834-48fc-9133-98cc215378d0.png)
 
 ## Glasses View
 
@@ -20,7 +20,7 @@
 
 ## Responsive UI
 
-![image](https://user-images.githubusercontent.com/91973281/204219810-5e1dbe89-ad83-489a-b368-2ff7d6159cfe.png)
+![image](https://user-images.githubusercontent.com/91973281/204221777-7a07ea5e-3875-4b3f-a822-d254199e1953.png)
 
 ## Infinite Scroll Function
 
