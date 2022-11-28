@@ -14,55 +14,61 @@ const fetchGlasses = (url: string, title: string) => {
   <div class="menu-bar">
     <div class="menu-btn">
       <a>Menu</a>
-      <ul>
+      <ul class="main-menu">
         <li class="menu-item">
-          <a>Spectacles</a>
-          <svg width="13" height="13" viewBox="0 0 81.601 90.666">
-            <path
-              d="M91.2,53.333,9.6,98.666V8Z"
-              transform="translate(-9.6 -8)"
-            />
-          </svg>
+          <div class="menu-item-label">
+            Spectacles
+            <svg width="13" height="13" viewBox="0 0 81.601 90.666">
+              <path
+                d="M91.2,53.333,9.6,98.666V8Z"
+                transform="translate(-9.6 -8)"
+              />
+            </svg>
+          </div>
+
           <ul class="nested-submenu">
             <li
               class="menu-item"
               @click="fetchGlasses('spectacles-women', 'Spectacles Women')"
             >
-              <a>Women</a>
+              <a class="menu-item-label">Women</a>
             </li>
             <li
               class="menu-item"
               @click="fetchGlasses('spectacles-men', 'Spectacles Men')"
             >
-              <a>Men</a>
+              <a class="menu-item-label">Men</a>
             </li>
           </ul>
         </li>
         <li class="menu-item">
-          <a>Sunglasses</a>
-          <svg width="13" height="13" viewBox="0 0 81.601 90.666">
-            <path
-              d="M91.2,53.333,9.6,98.666V8Z"
-              transform="translate(-9.6 -8)"
-            />
-          </svg>
-          <ul class="nested-submenu">
+          <div class="menu-item-label">
+            Sunglasses
+            <svg width="13" height="13" viewBox="0 0 81.601 90.666">
+              <path
+                d="M91.2,53.333,9.6,98.666V8Z"
+                transform="translate(-9.6 -8)"
+              />
+            </svg>
+          </div>
+
+          <ul class="nested-submenu nested-submenu-second">
             <li
               class="menu-item"
               @click="fetchGlasses('sunglasses-women', 'Sunglasses Women')"
             >
-              <a>Women</a>
+              <a class="menu-item-label">Women</a>
             </li>
             <li
               class="menu-item"
               @click="fetchGlasses('sunglasses-men', 'Sunglasses Men')"
             >
-              <a>Men</a>
+              <a class="menu-item-label">Men</a>
             </li>
           </ul>
         </li>
-        <li class="menu-item"><a>Home Try On</a></li>
-        <li class="menu-item"><a>Free Eye Test</a></li>
+        <li class="menu-item"><a class="menu-item-label">Home Try On</a></li>
+        <li class="menu-item"><a class="menu-item-label">Free Eye Test</a></li>
       </ul>
     </div>
 
@@ -84,13 +90,6 @@ const fetchGlasses = (url: string, title: string) => {
   z-index: 10;
 }
 
-a {
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  cursor: hand;
-}
-
 .menu-btn {
   display: flex;
   align-items: center;
@@ -104,7 +103,7 @@ a {
   text-decoration: underline !important;
 }
 
-.menu-bar ul > li {
+.menu-item-label {
   display: flex;
   align-items: center;
   transition: all 0.3s;
@@ -115,27 +114,31 @@ a {
   justify-content: space-between;
 }
 
-.menu-btn ul {
-  position: absolute;
+ul {
   top: -1px;
-  height: calc(100vh - 59px) !important;
   background: white;
-  left: -350px;
   width: 350px;
   display: block !important;
   transition: 0.3s;
+}
+
+.main-menu,
+.nested-submenu {
+  position: absolute;
+  height: calc(100vh - 59px);
+  left: -351px;
+}
+
+.main-menu {
+  top: 100%;
   border: 1px solid black;
 }
 
-.menu-btn > ul {
-  top: 100%;
-}
-
-.menu-btn:hover > ul {
+.menu-btn:hover .main-menu {
   left: -1px;
 }
 
-ul li:hover > ul.nested-submenu {
+.menu-item:hover > .nested-submenu {
   left: 100%;
 }
 
@@ -144,26 +147,33 @@ ul li:hover > ul.nested-submenu {
   left: -1px;
   background: white;
   z-index: -1;
+  border: 1px solid black;
 }
 
-ul > li {
+.nested-submenu-second {
+  top: calc(-100% - 1px) !important;
+}
+
+.menu-item-label {
   border-bottom: 1px solid black;
 }
 
-ul > li:hover {
+.menu-item:hover > .menu-item-label {
   background: black;
+  color: white;
 }
 
-ul > li:hover > a {
-  color: white !important;
-}
-
-ul li > a {
+.menu-item-label {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.menu-item:hover > svg {
+.menu-item:hover svg {
   fill: white;
 }
 
@@ -173,5 +183,31 @@ ul li > a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) {
+  .menu-item {
+    display: block !important;
+  }
+
+  .nested-submenu {
+    height: auto;
+    top: 100%;
+    position: unset;
+    margin-left: -1px;
+    margin-top: -1px;
+    border-bottom: none;
+    max-height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+
+  .menu-item:hover .nested-submenu {
+    max-height: 200px;
+  }
+
+  ul li:hover > ul.nested-submenu {
+    left: -1px;
+  }
 }
 </style>

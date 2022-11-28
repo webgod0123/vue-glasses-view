@@ -57,5 +57,6 @@ onBeforeMount(() => {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid black;
+  border-left: 1px solid black;
 }
 </style>

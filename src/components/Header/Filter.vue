@@ -146,6 +146,7 @@ const clearFilters = () => {
   flex-wrap: wrap;
   background: white;
   margin-top: 60px;
+  border-left: 1px solid black;
 }
 
 .page-title {
@@ -181,7 +182,7 @@ const clearFilters = () => {
 .filter-field {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s;
+  transition: max-height 0.5s;
 }
 
 .filter-field.active {
@@ -192,6 +193,7 @@ const clearFilters = () => {
   background: white;
   border-top: 1px solid black;
   border-right: 1px solid black;
+  border-left: 1px solid black;
   padding: 20px 0;
 }
 
@@ -240,6 +242,7 @@ const clearFilters = () => {
   background: white;
   border-top: 1px solid black;
   border-right: 1px solid black;
+  border-left: 1px solid black;
   text-transform: uppercase;
 }
 
