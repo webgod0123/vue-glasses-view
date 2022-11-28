@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="glass-card">
+  <div class="glass-card" v-if="glass">
     <div class="glass-content">
       <div class="glass-name">
         {{ glass.name }}

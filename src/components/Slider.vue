@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 
 const activeIndex = ref(0);
@@ -10,7 +10,7 @@ const props = defineProps({
   },
 });
 
-const changeIndex = (value: number) => {
+const changeIndex = (value) => {
   const mediaLength = props.media.length;
   let index = activeIndex.value;
   index += value;
