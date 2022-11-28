@@ -1,16 +1,17 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import type { Media } from "@/types";
+import { PropType, ref } from "vue";
 
 const activeIndex = ref(0);
 
 const props = defineProps({
   media: {
-    type: Array,
+    type: Array as PropType<Media[]>,
     default: [],
   },
 });
 
-const changeIndex = (value) => {
+const changeIndex = (value: number) => {
   const mediaLength = props.media.length;
   let index = activeIndex.value;
   index += value;

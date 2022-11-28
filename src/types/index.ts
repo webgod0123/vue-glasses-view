@@ -2,7 +2,11 @@ export interface Glass {
   id: string;
   name: string;
   price: number;
-  media: { url: string }[];
+  media: Media[];
+}
+
+export interface Media {
+  url: string;
 }
 
 export interface Filter {
