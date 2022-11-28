@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import type { Glass } from "@/types";
+import type { PropType } from "@vue/runtime-core";
 import Slider from "./Slider.vue";
 
 const props = defineProps({
   glass: {
-    type: Object,
+    type: Object as PropType<Glass>,
   },
 });
 </script>
