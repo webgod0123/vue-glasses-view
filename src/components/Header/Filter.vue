@@ -29,7 +29,10 @@ const openFilterField = (option: FilterOption) => {
   if (filterOption.value === option) {
     if (!isOpen.value) isOpen.value = true;
     else isOpen.value = false;
-  } else filterOption.value = option;
+  } else {
+    if (!isOpen.value) isOpen.value = true;
+    filterOption.value = option;
+  }
 };
 
 const addFilter = (value: string, type: FilterOption) => {
